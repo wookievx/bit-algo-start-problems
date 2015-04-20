@@ -109,7 +109,6 @@ string SCT<T>::toString(){
 }
 template<class T>
 T SCT<T>::inQuery(int begin,int end,int nodel,int noder,int pos){
-	//printf("Wywolanie dal pozycji %d [ %d , %d , %d , %d ]\n",pos,begin,end,nodel,noder);  lame but in this case pretty efficient debug
 	if (begin==nodel && end==noder) return tab[pos];
 	int pivot=(nodel+noder)/2;
 	return (pivot<begin ? 0 : inQuery(begin,(pivot<end ? pivot : end ),nodel,pivot,leftSon(pos))) // recursion specifications
