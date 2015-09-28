@@ -1,0 +1,51 @@
+/*
+ * sudoku.h
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+#ifndef SUDOKU_H_
+#define SUDOKU_H_
+
+#include <bitset>
+#include <array>
+#include <exception>
+
+typedef std::bitset<10> PosibilitySet;
+
+class wrongType : logic_error {
+
+};
+class Sudoku {
+public:
+	// Method below should throw some kind of "out of range" exception (only ind<=9 returns proper set)
+	static PosibilitySet singleOption(size_t ind)  {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(i);
+	}
+	static PosibilitySet singleOptionMask(size_t ind) {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(1023^i);
+	}
+private:
+	class Field {
+	public:
+		Field(const Field& toCp): filled(toCp.filled),value(toCp.value) {}
+		Field& operator&=(const Field& andField) {
+			if ()
+			return *this;
+		}
+	private:
+		bool filled;
+		union {
+			short int number;
+			PosibilitySet set;
+		} value;
+	};
+};
+
+
+#endif /* SUDOKU_H_ */

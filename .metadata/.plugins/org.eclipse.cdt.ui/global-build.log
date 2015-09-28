@@ -1,0 +1,1123 @@
+17:57:41 **** Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType()’:
+../sudoku.h:33:28: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType():objectInfo(""){}
+                            ^
+../sudoku.h:33:28: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType(const char*)’:
+../sudoku.h:34:46: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType(const char* init):objectInfo(init) {}
+                                              ^
+../sudoku.h:34:46: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType(const string&)’:
+../sudoku.h:35:62: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType(const std::string& init): objectInfo(init.c_str()) {}
+                                                              ^
+../sudoku.h:35:62: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Field::Field(const PosibilitySet&)’:
+../sudoku.h:48:61: error: no matching function for call to ‘Sudoku::Field::<anonymous union>::._77(const PosibilitySet&)’
+   Field(const PosibilitySet& init): filled(false),value(init) {}
+                                                             ^
+../sudoku.h:48:61: note: candidates are:
+../sudoku.h:67:9: note: constexpr Sudoku::Field::<anonymous union>::<constructor>(const Sudoku::Field::<anonymous union>&)
+   union {
+         ^
+../sudoku.h:67:9: note:   no known conversion for argument 1 from ‘const PosibilitySet {aka const std::bitset<10ul>}’ to ‘const Sudoku::Field::<anonymous union>&’
+../sudoku.h:67:9: note: constexpr Sudoku::Field::<anonymous union>::<constructor>(Sudoku::Field::<anonymous union>&&)
+../sudoku.h:67:9: note:   no known conversion for argument 1 from ‘const PosibilitySet {aka const std::bitset<10ul>}’ to ‘Sudoku::Field::<anonymous union>&&’
+../sudoku.h: In constructor ‘Sudoku::Field::Field(short int)’:
+../sudoku.h:49:49: error: no matching function for call to ‘Sudoku::Field::<anonymous union>::._77(short int&)’
+   Field(short int init): filled(true),value(init) {}
+                                                 ^
+../sudoku.h:49:49: note: candidates are:
+../sudoku.h:67:9: note: constexpr Sudoku::Field::<anonymous union>::<constructor>(const Sudoku::Field::<anonymous union>&)
+   union {
+         ^
+../sudoku.h:67:9: note:   no known conversion for argument 1 from ‘short int’ to ‘const Sudoku::Field::<anonymous union>&’
+../sudoku.h:67:9: note: constexpr Sudoku::Field::<anonymous union>::<constructor>(Sudoku::Field::<anonymous union>&&)
+../sudoku.h:67:9: note:   no known conversion for argument 1 from ‘short int’ to ‘Sudoku::Field::<anonymous union>&&’
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+18:02:12 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType()’:
+../sudoku.h:33:28: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType():objectInfo(""){}
+                            ^
+../sudoku.h:33:28: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType(const char*)’:
+../sudoku.h:34:46: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType(const char* init):objectInfo(init) {}
+                                              ^
+../sudoku.h:34:46: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::wrongType::wrongType(const string&)’:
+../sudoku.h:35:62: error: no matching function for call to ‘std::logic_error::logic_error()’
+   wrongType(const std::string& init): objectInfo(init.c_str()) {}
+                                                              ^
+../sudoku.h:35:62: note: candidates are:
+In file included from /usr/include/c++/4.9.2/array:38:0,
+                 from ../sudoku.h:12,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/stdexcept:62:5: note: std::logic_error::logic_error(const string&)
+     logic_error(const string& __arg);
+     ^
+/usr/include/c++/4.9.2/stdexcept:62:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/c++/4.9.2/stdexcept:55:9: note: std::logic_error::logic_error(const std::logic_error&)
+   class logic_error : public exception 
+         ^
+/usr/include/c++/4.9.2/stdexcept:55:9: note:   candidate expects 1 argument, 0 provided
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Field::Field(const PosibilitySet&)’:
+../sudoku.h:48:57: error: use of deleted function ‘Sudoku::Field::<anonymous union>::<constructor>()’
+   Field(const PosibilitySet& init): filled(false),value() {
+                                                         ^
+../sudoku.h:71:9: note: ‘Sudoku::Field::<anonymous union>::<constructor>()’ is implicitly deleted because the default definition would be ill-formed:
+   union {
+         ^
+../sudoku.h:73:18: error: union member ‘Sudoku::Field::<anonymous union>::set’ with non-trivial ‘constexpr std::bitset<_Nb>::bitset() [with long unsigned int _Nb = 10ul]’
+    PosibilitySet set;
+                  ^
+../sudoku.h: In constructor ‘Sudoku::Field::Field(short int)’:
+../sudoku.h:51:45: error: use of deleted function ‘Sudoku::Field::<anonymous union>::<constructor>()’
+   Field(short int init): filled(true),value() {
+                                             ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+22:01:13 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In function ‘Sudoku::Field operator&(const Sudoku::Field&, const Sudoku::Field&)’:
+../sudoku.h:59:20: error: no matching function for call to ‘Sudoku::Field::Field(const Sudoku::Field&, const Sudoku::Field&)’
+    return Field(a,b);
+                    ^
+../sudoku.h:59:20: note: candidates are:
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+../sudoku.h:37:3: note: Sudoku::Field::Field(const PosibilitySet&, const PosibilitySet&)
+   Field(const PosibilitySet& a,const PosibilitySet& b): filled(false),value(),set(a) {
+   ^
+../sudoku.h:37:3: note:   no known conversion for argument 1 from ‘const Sudoku::Field’ to ‘const PosibilitySet& {aka const std::bitset<10ul>&}’
+../sudoku.h:36:3: note: Sudoku::Field::Field(const PosibilitySet&)
+   Field(const PosibilitySet& init): filled(false),value(),set(init) {}
+   ^
+../sudoku.h:36:3: note:   candidate expects 1 argument, 2 provided
+../sudoku.h:35:3: note: Sudoku::Field::Field(short int)
+   Field(short int initValue):filled(true),value(initValue),set() {}
+   ^
+../sudoku.h:35:3: note:   candidate expects 1 argument, 2 provided
+../sudoku.h:34:3: note: Sudoku::Field::Field()
+   Field():filled(false),value(),set(){}
+   ^
+../sudoku.h:34:3: note:   candidate expects 0 arguments, 2 provided
+../sudoku.h:32:8: note: constexpr Sudoku::Field::Field(const Sudoku::Field&)
+  class Field {
+        ^
+../sudoku.h:32:8: note:   candidate expects 1 argument, 2 provided
+../sudoku.h:32:8: note: constexpr Sudoku::Field::Field(Sudoku::Field&&)
+../sudoku.h:32:8: note:   candidate expects 1 argument, 2 provided
+make: *** [test.o] Błąd 1
+22:01:53 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:02:04 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:02:55 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:02:57 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:14:51 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+../test.cpp: In function ‘int main()’:
+../test.cpp:16:13: error: ‘test’ is not a member of ‘Sudoku’
+  std::cout<<Sudoku::test(a,b);
+             ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+22:15:32 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:15:35 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:25:27 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:50:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:25:37 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:27:58 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:50:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:28:01 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:36:29 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:52:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:42:18 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:52:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+22:48:49 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+22:54:33 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:52:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+23:04:18 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:52:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+23:04:30 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+23:09:02 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:16:23 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Sudoku(const istream&)’:
+../sudoku.h:28:9: error: ambiguous overload for ‘operator>>’ (operand types are ‘const istream {aka const std::basic_istream<char>}’ and ‘int8_t {aka signed char}’)
+    input>>tmp;
+         ^
+../sudoku.h:28:9: note: candidates are:
+In file included from ../sudoku.h:16:0,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/istream:120:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(__istream_type& (*__pf)(__istream_type&))
+       ^
+/usr/include/c++/4.9.2/istream:120:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&) {aka std::basic_istream<char>& (*)(std::basic_istream<char>&)}’
+/usr/include/c++/4.9.2/istream:124:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>] <near match>
+       operator>>(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.9.2/istream:124:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.9.2/istream:131:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(ios_base& (*__pf)(ios_base&))
+       ^
+/usr/include/c++/4.9.2/istream:131:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.9.2/istream:259:7: note: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>] <near match>
+       operator>>(__streambuf_type* __sb);
+       ^
+/usr/include/c++/4.9.2/istream:259:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from ../test.cpp:9:0:
+../sudoku.h:30:10: error: expected unqualified-id before ‘[’ token
+     Field[i/9][i%9]=Field(fullOption());//Set of the field is set with the proper value
+          ^
+../sudoku.h:33:10: error: expected unqualified-id before ‘[’ token
+     Field[i/9][i%9]=Field(initTable[tmp-1]);
+          ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:17:11 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Sudoku(const istream&)’:
+../sudoku.h:28:9: error: ambiguous overload for ‘operator>>’ (operand types are ‘const istream {aka const std::basic_istream<char>}’ and ‘int8_t {aka signed char}’)
+    input>>tmp;
+         ^
+../sudoku.h:28:9: note: candidates are:
+In file included from ../sudoku.h:16:0,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/istream:120:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(__istream_type& (*__pf)(__istream_type&))
+       ^
+/usr/include/c++/4.9.2/istream:120:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&) {aka std::basic_istream<char>& (*)(std::basic_istream<char>&)}’
+/usr/include/c++/4.9.2/istream:124:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>] <near match>
+       operator>>(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.9.2/istream:124:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.9.2/istream:131:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(ios_base& (*__pf)(ios_base&))
+       ^
+/usr/include/c++/4.9.2/istream:131:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.9.2/istream:259:7: note: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>] <near match>
+       operator>>(__streambuf_type* __sb);
+       ^
+/usr/include/c++/4.9.2/istream:259:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from ../test.cpp:9:0:
+../sudoku.h:30:22: error: cannot convert ‘Sudoku::Field’ to ‘std::array<signed char, 9ul>::value_type {aka signed char}’ in assignment
+     content[i/9][i%9]=Field(fullOption());//Set of the field is set with the proper value
+                      ^
+../sudoku.h:33:22: error: cannot convert ‘Sudoku::Field’ to ‘std::array<signed char, 9ul>::value_type {aka signed char}’ in assignment
+     content[i/9][i%9]=Field(initTable[tmp-1]);
+                      ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:18:01 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Sudoku(const istream&)’:
+../sudoku.h:28:9: error: ambiguous overload for ‘operator>>’ (operand types are ‘const istream {aka const std::basic_istream<char>}’ and ‘int8_t {aka signed char}’)
+    input>>tmp;
+         ^
+../sudoku.h:28:9: note: candidates are:
+In file included from ../sudoku.h:16:0,
+                 from ../test.cpp:9:
+/usr/include/c++/4.9.2/istream:120:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(__istream_type& (*__pf)(__istream_type&))
+       ^
+/usr/include/c++/4.9.2/istream:120:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&) {aka std::basic_istream<char>& (*)(std::basic_istream<char>&)}’
+/usr/include/c++/4.9.2/istream:124:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>] <near match>
+       operator>>(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.9.2/istream:124:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.9.2/istream:131:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+       operator>>(ios_base& (*__pf)(ios_base&))
+       ^
+/usr/include/c++/4.9.2/istream:131:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.9.2/istream:259:7: note: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>] <near match>
+       operator>>(__streambuf_type* __sb);
+       ^
+/usr/include/c++/4.9.2/istream:259:7: note:   no known conversion for argument 1 from ‘int8_t {aka signed char}’ to ‘std::basic_istream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:18:20 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:22:37 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+./test.o: In function `Sudoku::Sudoku(std::istream&)':
+/home/lukaszlampart/workspace/Zadania/Sudoku solver/Debug/../sudoku.h:33: undefined reference to `Sudoku::initTable'
+collect2: error: ld returned 1 exit status
+makefile:44: polecenia dla obiektu 'Sudoku solver' nie powiodły się
+make: *** [Sudoku solver] Błąd 1
+12:23:05 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h:125:157: error: in-class initialization of static data member ‘std::array<Sudoku::Number, 9ul> Sudoku::initTable’ of incomplete type
+  static std::array<Number,9> initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+                                                                                                                                                             ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:23:54 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+In file included from ../test.cpp:9:0:
+../sudoku.h: At global scope:
+../sudoku.h:125:30: error: ‘std::array<Sudoku::Number, 9ul> Sudoku::initTable’ is private
+  static std::array<Number,9> initTable;
+                              ^
+../sudoku.h:128:9: error: within this context
+ Sudoku::initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+         ^
+../sudoku.h:128:9: error: ‘initTable’ in ‘class Sudoku’ does not name a type
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:24:26 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+In file included from ../test.cpp:9:0:
+../sudoku.h: At global scope:
+../sudoku.h:128:19: error: ‘Number’ was not declared in this scope
+ static std::array<Number,9> Sudoku::initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+                   ^
+../sudoku.h:128:27: error: template argument 1 is invalid
+ static std::array<Number,9> Sudoku::initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+                           ^
+../sudoku.h:128:46: error: invalid type in declaration before ‘=’ token
+ static std::array<Number,9> Sudoku::initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+                                              ^
+../sudoku.h:128:46: error: ‘static’ may not be used when defining (as opposed to declaring) a static data member [-fpermissive]
+../sudoku.h:128:46: error: conflicting declaration ‘int Sudoku::initTable’
+../sudoku.h:125:30: note: previous declaration as ‘std::array<Sudoku::Number, 9ul> Sudoku::initTable’
+  static std::array<Number,9> initTable;
+                              ^
+../sudoku.h:128:46: error: declaration of ‘std::array<Sudoku::Number, 9ul> Sudoku::initTable’ outside of class is not definition [-fpermissive]
+ static std::array<Number,9> Sudoku::initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+                                              ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:26:46 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h:126:2: error: ‘initTable’ does not name a type
+  initTable={Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE};
+  ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:38:34 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h:125:158: error: in-class initialization of static data member ‘std::array<Sudoku::Number, 9ul> Sudoku::initTable’ of incomplete type
+  static std::array<Number,9> initTable{{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                                              ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:39:00 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h:125:161: error: non-static data member ‘initTable’ declared ‘constexpr’
+  constexpr std::array<Number,9> initTable{{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                                                 ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:39:15 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+./test.o: In function `Sudoku::Sudoku(std::istream&)':
+/home/lukaszlampart/workspace/Zadania/Sudoku solver/Debug/../sudoku.h:33: undefined reference to `Sudoku::initTable'
+collect2: error: ld returned 1 exit status
+makefile:44: polecenia dla obiektu 'Sudoku solver' nie powiodły się
+make: *** [Sudoku solver] Błąd 1
+12:39:49 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:72:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+./test.o: In function `Sudoku::Sudoku(std::istream&)':
+/home/lukaszlampart/workspace/Zadania/Sudoku solver/Debug/../sudoku.h:33: undefined reference to `Sudoku::initTable'
+collect2: error: ld returned 1 exit status
+makefile:44: polecenia dla obiektu 'Sudoku solver' nie powiodły się
+make: *** [Sudoku solver] Błąd 1
+12:49:46 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h:21:30: error: ‘Number’ was not declared in this scope
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                              ^
+../sudoku.h:21:38: error: template argument 1 is invalid
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                      ^
+../sudoku.h:21:52: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                    ^
+../sudoku.h:21:64: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                ^
+../sudoku.h:21:76: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                            ^
+../sudoku.h:21:90: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                          ^
+../sudoku.h:21:103: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                       ^
+../sudoku.h:21:116: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                    ^
+In file included from ../test.cpp:9:0:
+../sudoku.h:21:128: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                ^
+../sudoku.h:21:142: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                              ^
+../sudoku.h:21:156: error: ‘Number’ has not been declared
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                                            ^
+../sudoku.h:21:169: error: braces around scalar initializer for type ‘const int’
+  constexpr static std::array<Number,9> initTable={{Number::ONE,Number::TWO,Number::THREE,Number::FOUR,Number::FIVE,Number::SIX,Number::SEVEN,Number::EIGHT,Number::NINE}};
+                                                                                                                                                                         ^
+../sudoku.h: In constructor ‘Sudoku::Sudoku(std::istream&)’:
+../sudoku.h:34:44: error: invalid types ‘const int[int]’ for array subscript
+     content[i/9][i%9]=Field(initTable[tmp-1]);
+                                            ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:50:20 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:74:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+./test.o: In function `Sudoku::Sudoku(std::istream&)':
+/home/lukaszlampart/workspace/Zadania/Sudoku solver/Debug/../sudoku.h:35: undefined reference to `Sudoku::initTable'
+makefile:44: polecenia dla obiektu 'Sudoku solver' nie powiodły się
+collect2: error: ld returned 1 exit status
+make: *** [Sudoku solver] Błąd 1
+12:51:12 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In constructor ‘Sudoku::Sudoku(std::istream&)’:
+../sudoku.h:36:29: error: ‘initTable’ was not declared in this scope
+     content[i/9][i%9]=Field(initTable[tmp-1]);
+                             ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+12:51:52 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:76:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:52:29 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:76:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:53:04 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+12:58:13 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:58:16 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+12:59:28 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+12:59:34 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:00:48 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:00:50 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:07:56 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:08:04 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:08:29 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:08:31 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:08:48 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:08:51 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:09:51 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:09:54 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:10:06 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+13:10:09 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:10:43 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:11:03 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+13:26:33 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+../sudoku.h: In member function ‘std::array<Sudoku::Field, 9ul>& Sudoku::Field::operator[](size_t)’:
+../sudoku.h:137:36: error: invalid use of non-static data member ‘Sudoku::content’
+  std::array<std::array<Field,9>,9> content;
+                                    ^
+../sudoku.h:128:11: error: from this location
+    return content[ind];
+           ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+13:27:03 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:81:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+14:50:50 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:88:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+../sudoku.h: In member function ‘Sudoku::ArrayInterface Sudoku::operator[](size_t)’:
+../sudoku.h:142:60: error: no matching function for call to ‘Sudoku::ArrayInterface::ArrayInterface(std::array<std::array<Sudoku::Field, 9ul>, 9ul>::value_type&, std::array<Sudoku::Field, 9ul>&, std::array<Sudoku::Field, 9ul>&, std::array<std::array<Sudoku::Field, 3ul>, 3ul>::value_type&)’
+   return ArrayInterface(content[ind],row,column,rect[ind/3]);
+                                                            ^
+../sudoku.h:142:60: note: candidates are:
+../sudoku.h:161:3: note: Sudoku::ArrayInterface::ArrayInterface(const Sudoku::ArrayInterface&)
+   ArrayInterface(const ArrayInterface&);
+   ^
+../sudoku.h:161:3: note:   candidate expects 1 argument, 4 provided
+../sudoku.h:160:3: note: Sudoku::ArrayInterface::ArrayInterface()
+   ArrayInterface();
+   ^
+../sudoku.h:160:3: note:   candidate expects 0 arguments, 4 provided
+../sudoku.h:159:3: note: Sudoku::ArrayInterface::ArrayInterface(Sudoku::ArrayInterface::nineRef, Sudoku::ArrayInterface::nineRef, Sudoku::ArrayInterface::nineRef, Sudoku::ArrayInterface::threeRef, size_t)
+   ArrayInterface(nineRef iField,nineRef iRow,nineRef iColumn,threeRef iRect,size_t iNumb):field(iField),row(iRow),column(iColumn),rect(iRect),numb(iNumb) {}
+   ^
+../sudoku.h:159:3: note:   candidate expects 5 arguments, 4 provided
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+14:52:12 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:88:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+../sudoku.h: In member function ‘Sudoku::ArrayInterface Sudoku::operator[](size_t)’:
+../sudoku.h:142:60: error: no matching function for call to ‘Sudoku::ArrayInterface::ArrayInterface(std::array<std::array<Sudoku::Field, 9ul>, 9ul>::value_type&, std::array<Sudoku::Field, 9ul>&, std::array<Sudoku::Field, 9ul>&, std::array<std::array<Sudoku::Field, 3ul>, 3ul>::value_type&)’
+   return ArrayInterface(content[ind],row,column,rect[ind/3]);
+                                                            ^
+../sudoku.h:142:60: note: candidates are:
+../sudoku.h:161:3: note: Sudoku::ArrayInterface::ArrayInterface(const Sudoku::ArrayInterface&)
+   ArrayInterface(const ArrayInterface&);
+   ^
+../sudoku.h:161:3: note:   candidate expects 1 argument, 4 provided
+../sudoku.h:160:3: note: Sudoku::ArrayInterface::ArrayInterface()
+   ArrayInterface();
+   ^
+../sudoku.h:160:3: note:   candidate expects 0 arguments, 4 provided
+../sudoku.h:159:3: note: Sudoku::ArrayInterface::ArrayInterface(std::array<Sudoku::Field, 9ul>&, std::array<Sudoku::Field, 9ul>&, std::array<Sudoku::Field, 9ul>&, std::array<Sudoku::Field, 3ul>&, size_t)
+   ArrayInterface(std::array<Field,9>& iField,std::array<Field,9>& iRow,std::array<Field,9>& iColumn,std::array<Field,3>& iRect,size_t iNumb):field(iField),row(iRow),column(iColumn),rect(iRect),numb(iNumb) {}
+   ^
+../sudoku.h:159:3: note:   candidate expects 5 arguments, 4 provided
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+14:52:42 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:88:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+14:52:53 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+14:55:32 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:88:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+15:05:31 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:89:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+../sudoku.h: In function ‘std::ostream& operator<<(std::ostream&, const Sudoku::Field&)’:
+../sudoku.h:140:8: error: invalid use of non-static data member ‘Sudoku::Field::filled’
+   bool filled;
+        ^
+../sudoku.h:135:9: error: from this location
+    if (!filled) os<<'0';
+         ^
+../sudoku.h:141:16: error: invalid use of non-static data member ‘Sudoku::Field::value’
+   std::int16_t value;
+                ^
+../sudoku.h:136:13: error: from this location
+    else os<<value;
+             ^
+subdir.mk:18: polecenia dla obiektu 'test.o' nie powiodły się
+make: *** [test.o] Błąd 1
+15:06:02 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:89:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+15:06:06 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+make: Nie ma nic do zrobienia w 'all'.
+16:28:19 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:92:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 

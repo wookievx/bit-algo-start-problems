@@ -1,0 +1,18 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+
+#include "sudoku.h"
+#include <iostream>
+
+int main() {
+	PosibilitySet a=Sudoku::singleOption(2);
+	PosibilitySet b=Sudoku::singleOptionMask(2);
+	std::cout<<a.to_string()<<" "<<b.to_string()<<std::endl;
+	std::cout<<Sudoku::test(a,b)<<std::endl<<Sudoku::testv2(false)<<std::endl<<Sudoku::testv2(true)<<std::endl;
+	return 0;
+}

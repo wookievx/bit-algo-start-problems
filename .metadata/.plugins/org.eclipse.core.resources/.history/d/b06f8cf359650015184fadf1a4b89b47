@@ -1,0 +1,98 @@
+/*
+ * sudoku.h
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+#ifndef SUDOKU_H_
+#define SUDOKU_H_
+
+#include <bitset>
+#include <array>
+#include <stdexcept>
+#include <string>
+#include <cstdint>
+typedef std::bitset<9> PosibilitySet;
+
+
+class Sudoku {
+public:
+	// Method below should throw some kind of "out of range" exception (only ind<=9 returns proper set)
+	static PosibilitySet singleOption(size_t ind)  {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(i);
+	}
+	static PosibilitySet singleOptionMask(size_t ind) {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(1023^i);
+	}
+	// Some testing
+	static const char* test(const PosibilitySet& a,const PosibilitySet& b) {
+		Field af(a);
+		Field bf(b);
+		Field cf=1;
+		try {
+			cf&=af;
+		} catch (std::exception& e) {
+			return e.what();
+		}
+		return "no exception\n";
+	}
+	static const char* testv2(bool type) {
+		Field a(1);
+		Field b(2);
+		try {
+			if (type) {
+				a&=b;
+			}
+			else {
+				auto c=a&b;
+			}
+		} catch (std::exception& e) {
+			return e.what();
+		}
+		return "no exception";
+	}
+	enum class Numbers : std::int8_t { ONE = 1, TWO, THREE , FOUR , FIVE , SIX , SEVEN , EIGHT , NINE };
+private:
+	class Field {
+	public:
+		Field():filled(false),value(),set(){}
+		Field(short int initValue):filled(true),value(initValue),set() {}
+		Field(const PosibilitySet& init): filled(false),value(),set(init) {}
+		Field(const PosibilitySet& a,const PosibilitySet& b): filled(false),value(),set(a) {
+			set&=b;
+		}
+		//This operator ...
+		Field& operator/=(const Field& b) {
+			if (filled) throw std::logic_error("Accessing set of the filled field");
+			if (b.filled) {
+				set&=singleOptionMask(b.value);
+			}
+			return *this;
+		}
+		Field& operator&=(const Field& b) {
+			if (filled) throw std::logic_error("Accesing set of the filled field");
+			if (!b.filled) {
+				set&=b.set;
+			}
+			return *this;
+		}
+		friend Field operator&(const Field& a,const Field& b) {
+			if (a.filled && b.filled) throw std::logic_error("Can't interpret intersection of two undefined sets");
+			if (a.filled) return Field(b);
+			if (b.filled) return Field(a);
+			return Field(a.set,b.set);
+		}
+	private:
+		bool filled;
+		short int value;
+		PosibilitySet set;
+	};
+};
+
+
+#endif /* SUDOKU_H_ */

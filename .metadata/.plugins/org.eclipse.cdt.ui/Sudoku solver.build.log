@@ -1,0 +1,20 @@
+16:28:19 **** Incremental Build of configuration Debug for project Sudoku solver ****
+make all 
+Building file: ../test.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -D__GXX_EXPERIMENTAL_CXX0X__ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.d" -o "test.o" "../test.cpp"
+In file included from ../test.cpp:9:0:
+../sudoku.h: In static member function ‘static const char* Sudoku::testv2(bool)’:
+../sudoku.h:92:10: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+     auto c=a&b;
+          ^
+Finished building: ../test.cpp
+ 
+Building target: Sudoku solver
+Invoking: GCC C++ Linker
+g++  -o "Sudoku solver"  ./test.o   
+Finished building target: Sudoku solver
+ 
+
+16:28:20 Build Finished (took 1s.973ms)
+

@@ -1,0 +1,79 @@
+/*
+ * sudoku.h
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+#ifndef SUDOKU_H_
+#define SUDOKU_H_
+
+#include <bitset>
+#include <array>
+#include <stdexcept>
+#include <string>
+typedef std::bitset<10> PosibilitySet;
+
+
+class Sudoku {
+public:
+	// Method below should throw some kind of "out of range" exception (only ind<=9 returns proper set)
+	static PosibilitySet singleOption(size_t ind)  {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(i);
+	}
+	static PosibilitySet singleOptionMask(size_t ind) {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(1023^i);
+	}
+	class wrongType : std::logic_error {
+	public:
+		wrongType():objectInfo(""){}
+		wrongType(const char* init):objectInfo(init) {}
+		wrongType(const std::string& init): objectInfo(init.c_str()) {}
+		const char* what() const noexcept {
+			std::string tmp("Error type:\n");
+			tmp+=objectInfo;
+			return tmp.c_str();
+		}
+	private:
+		const char* objectInfo;
+	};
+private:
+	class Field {
+	public:
+		Field(const Field& toCp): filled(toCp.filled),value(toCp.value) {}
+		Field(const PosibilitySet& init): filled(false),value() {
+			value.set=init;
+		}
+		Field(short int init): filled(true),value() {
+			value.number=init;
+		}
+		//This operator ...
+		Field& operator/=(const Field& maskField) {
+			if (filled) throw wrongType("Trying to change non existing set\n");
+			if (maskField.filled) {
+				value.set&=singleOptionMask(maskField.value.number);
+			}
+			return *this;
+		}
+		Field& operator&=(const Field& andField) {
+			if (filled) throw wrongType("Trying to change non existing set\n");
+			if (!andField.filled) {
+				value.set&=andField.value.set;
+			}
+			return *this;
+		}
+	private:
+		bool filled;
+		union {
+			short int number;
+			PosibilitySet set;
+		} value;
+	};
+};
+
+
+#endif /* SUDOKU_H_ */

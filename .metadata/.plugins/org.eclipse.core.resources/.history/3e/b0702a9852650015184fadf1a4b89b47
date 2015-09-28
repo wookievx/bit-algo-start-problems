@@ -1,0 +1,70 @@
+/*
+ * sudoku.h
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+#ifndef SUDOKU_H_
+#define SUDOKU_H_
+
+#include <bitset>
+#include <array>
+#include <stdexcept>
+#include <string>
+typedef std::bitset<10> PosibilitySet;
+
+
+class Sudoku {
+public:
+	// Method below should throw some kind of "out of range" exception (only ind<=9 returns proper set)
+	static PosibilitySet singleOption(size_t ind)  {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(i);
+	}
+	static PosibilitySet singleOptionMask(size_t ind) {
+		size_t i=1;
+		i<<=ind-1;
+		return PosibilitySet(1023^i);
+	}
+private:
+	class Field {
+	public:
+		Field():filled(false),value(),set(){}
+		Field(short int initValue):filled(true),value(initValue),set() {}
+		Field(const PosibilitySet& init): filled(false),value(),set(init) {}
+		Field(const PosibilitySet& a,const PosibilitySet& b): filled(false),value(),set(a) {
+			set&=b;
+		}
+		//This operator ...
+		Field& operator/=(const Field& b) {
+			if (filled) throw std::logic_error("Accessing set of the filled field");
+			if (b.filled) {
+				set&=singleOptionMask(b.value);
+			}
+			return *this;
+		}
+		Field& operator&=(const Field& b) {
+			if (filled) throw std::logic_error("Accesing set of the filled field");
+			if (!b.filled) {
+				set&=b.set;
+			}
+			return *this;
+		}
+		friend Field operator&(const Field& a,const Field& b) {
+			if (a.filled && b.filled) throw std::logic_error("Can't interpret intersection of two undefined sets");
+			if (a.filled) return Field(b);
+			if (b.filled) return Field(a);
+			return Field(a,b);
+		}
+
+	private:
+		bool filled;
+		short int value;
+		PosibilitySet set;
+	};
+};
+
+
+#endif /* SUDOKU_H_ */

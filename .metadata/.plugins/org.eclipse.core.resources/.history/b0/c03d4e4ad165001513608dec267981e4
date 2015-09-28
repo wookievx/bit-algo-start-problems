@@ -1,0 +1,22 @@
+/*
+ * test.cpp
+ *
+ *  Created on: 27 wrz 2015
+ *      Author: lukaszlampart
+ */
+
+
+#include "sudoku.h"
+#include <iostream>
+
+int main() {
+	std::int8_t tmp;
+	std::cin>>tmp;
+	std::cout<<(int)tmp;
+	try {
+		Sudoku abc(std::cin);
+	} catch (std::exception& e) {
+		std::cout<<e.what();
+	}
+	return 0;
+}
